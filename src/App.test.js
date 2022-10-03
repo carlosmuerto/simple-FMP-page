@@ -1,15 +1,16 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import { store } from './app/store';
+import store from './app/store';
 import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(
-    <Provider store={store}>
-      <App />
-    </Provider>
-  );
-
-  expect(getByText(/learn/i)).toBeInTheDocument();
+describe('Header Test', () => {
+	test('renders Space Financial Modeling Prep', () => {
+		render(
+			<Provider store={store}>
+				<App />
+			</Provider>,
+		);
+		expect(screen.getByText(/Financial Modeling Prep/i)).toBeInTheDocument();
+	});
 });
