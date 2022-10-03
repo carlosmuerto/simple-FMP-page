@@ -1,10 +1,37 @@
-# Getting Started with Create React App and Redux
+# Financial Modeling Prep
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+> In this page, we are working with the real live data from the SpaceX API. Our task is to build a web application tha consume https://site.financialmodelingprep.com/ Restful API. The application will allow users to book rockets and join selected space missions.
 
-## Available Scripts
+![screenshot](./screenshot.jpeg)
 
-In the project directory, you can run:
+[Live Demo](https://github.com/carlosmuerto/simple-FMP-page)
+
+## Built With
+
+- JavaScript, CSS, HTML
+- React
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+ - Node.js
+
+### Setup
+- Clone this repo locally using git and the following git command
+```bash
+git clone https://github.com/carlosmuerto/simple-FMP-page
+```
+- or with GitHub CLI
+```bash
+gh repo clone carlosmuerto/simple-FMP-page
+```
+
+### Install dependency
+```bash
+npm install
+```
 
 ### `npm start`
 
@@ -29,18 +56,29 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Authors
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+👤 Carlos Vivas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- GitHub: [@carlosmuerto](https://github.com/carlosmuerto)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🤝 Contributing
 
-## Learn More
+Contributions, issues and feature requests are welcome!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Feel free to check the [issues page](../../issues).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+
+## Acknowledgments
+
+Original design idea by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
+
+
+## 📝 License
+
+This project is [MIT](LICENSE) licensed.
