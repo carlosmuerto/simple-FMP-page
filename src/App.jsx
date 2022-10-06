@@ -6,7 +6,8 @@ import {
 import React from 'react';
 import Header from './view/components/Header/header';
 import HomePage from './view/pages/Home/Home';
-import DetailsPage from './view/pages/Details/Details';
+import CardDetails from './view/pages/CardDetails/CardDetails';
+import CategoryDetailsPage from './view/pages/CategoryDetails/CategoryDetails';
 
 const links = [
   {
@@ -15,9 +16,14 @@ const links = [
     element: (<HomePage />),
   },
   {
-    path: '/Missions',
-    text: 'Details',
-    element: (<DetailsPage />),
+    path: '/card-details/:cardId',
+    text: 'Card Detail',
+    element: (<CardDetails />),
+  },
+  {
+    path: '/:categoryId/:entryId',
+    text: 'Category',
+    element: (<CategoryDetailsPage />),
   },
 ];
 const App = () => (
