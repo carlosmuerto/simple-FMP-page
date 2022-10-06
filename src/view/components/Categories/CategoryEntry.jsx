@@ -5,15 +5,13 @@ const CategoryEntry = ({ entry, category }) => {
   const navigate = useNavigate();
 
   const onClick = () => {
-    // eslint-disable-next-line no-console
-    console.log(`Navigate to ${category}: ${entry}`);
     navigate(`/${encodeURIComponent(category)}/${encodeURIComponent(entry)}`);
   };
   return (
-    <main className="app-category-entry">
+    <div className="app-category-entry">
       <h4>{entry}</h4>
       <button type="button" onClick={onClick}>{entry}</button>
-    </main>
+    </div>
   );
 };
 

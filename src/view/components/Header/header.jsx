@@ -1,14 +1,14 @@
 import {
-  NavLink,
   useLocation,
   matchPath,
+  useNavigate,
 } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './header.scss';
-import planet from './planet.png';
 
 const Header = ({ links }) => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const activeLock = links.filter((link) => {
     const match = matchPath(
@@ -21,23 +21,14 @@ const Header = ({ links }) => {
 
   return (
     <header className="app-header">
-      <NavLink to="/" end>
-        <div className="logo">
-          <img src={planet} alt="logo" />
-        </div>
-      </NavLink>
-      <h3 className="header">
-        <NavLink to="/" end>
-          Financial Modeling Prep
-        </NavLink>
-      </h3>
-      <nav>
-        {activeLock.map((link) => (
-          <div className="nav-links" key={`NavLinkTo${link.text}`}>
-            {activeLock[0].text}
-          </div>
-        ))}
-      </nav>
+
+      {activeLock[0].path !== '/'
+        ? <button type="button" onClick={() => { navigate(-1); }}>go back</button>
+        : <div />}
+
+      <div className="nav-links">
+        {activeLock[0].text}
+      </div>
     </header>
   );
 };

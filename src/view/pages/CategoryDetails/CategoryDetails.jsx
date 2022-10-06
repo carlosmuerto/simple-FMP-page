@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import * as HearthstoneInfoSlice from '../../../features/Category/HearthstoneCategorySlice';
+import Card from '../../components/Card/Card';
+import './CategoryDetails.scss';
 
 const CategoryDetailsPage = () => {
   const params = useParams();
@@ -16,18 +18,27 @@ const CategoryDetailsPage = () => {
       entry: params.entryId,
     }));
   }, [dispatch, params.categoryId, params.entryId]);
-  console.log(categories[HearthstoneInfoSlice.buildCategoryKey(category, entry)]);
   return (
     <main className="app-category-details">
       <h1>
-        Category Details Page
-        {' '}
-        {category}
-        {': '}
         {entry}
       </h1>
+      <div className="category-detail-card-list">
+        {categories[HearthstoneInfoSlice.buildCategoryKey(category, entry)]?.map(
+          (card) => (
+            <Card
+              key={card.cardId}
+              cardName={card.name}
+              cardId={card.cardId}
+              cardImage={card.img}
+            />
+          ),
+        )}
+      </div>
     </main>
   );
 };
+
+// {categories.map((card) => <Card key={card.cardId} card={card} />)}
 
 export default CategoryDetailsPage;
