@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import './Card.scss';
+import CardImage from './CardImage';
 import defaultImg from './NoImgCard.png';
 
 const Card = ({ cardName, cardId, cardImage }) => {
@@ -14,7 +15,7 @@ const Card = ({ cardName, cardId, cardImage }) => {
         {cardName}
       </h6>
       <button type="button" onClick={onClick}>
-        <img className="card-img" src={cardImage} alt={cardName} />
+        <CardImage cardImage={cardImage} cardName={cardName} />
       </button>
     </div>
   );

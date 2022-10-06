@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import * as HearthstoneInfoSlice from '../../../features/Category/HearthstoneCategorySlice';
 import Card from '../../components/Card/Card';
 import './CategoryDetails.scss';
@@ -9,9 +9,13 @@ const CategoryDetailsPage = () => {
   const params = useParams();
   const category = params.categoryId;
   const entry = params.entryId;
+  const location = useNavigate();
+
+  console.log(location);
 
   const dispatch = useDispatch();
   const categories = useSelector((store) => store.HearthstoneCategory.categories);
+  const allCards = useSelector((store) => store.HearthstoneCategory.allCards);
   useEffect(() => {
     dispatch(HearthstoneInfoSlice.fetchCategory({
       category: params.categoryId,
@@ -27,10 +31,10 @@ const CategoryDetailsPage = () => {
         {categories[HearthstoneInfoSlice.buildCategoryKey(category, entry)]?.map(
           (card) => (
             <Card
-              key={card.cardId}
-              cardName={card.name}
-              cardId={card.cardId}
-              cardImage={card.img}
+              key={card}
+              cardName={allCards[card].name}
+              cardId={allCards[card].cardId}
+              cardImage={allCards[card].img}
             />
           ),
         )}
@@ -38,7 +42,5 @@ const CategoryDetailsPage = () => {
     </main>
   );
 };
-
-// {categories.map((card) => <Card key={card.cardId} card={card} />)}
 
 export default CategoryDetailsPage;
