@@ -1,10 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/DELETEME/counterSlice';
+import HearthstoneInfoSlice from '../features/Info/HearthstoneInfoSlice';
+import HearthstoneCategorySlice from '../features/Category/HearthstoneCategorySlice';
+
+const reducer = {
+  hearthstoneInfo: HearthstoneInfoSlice,
+  HearthstoneCategory: HearthstoneCategorySlice,
+};
 
 const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-  },
+  reducer,
+  devTools: process.env.NODE_ENV !== 'production',
 });
 
 export default store;
