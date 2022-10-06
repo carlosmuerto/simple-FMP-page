@@ -31,7 +31,6 @@ const CardExpand = () => {
   const { cardId } = params;
   const allCards = useSelector((store) => store.HearthstoneCategory.allCards);
   const card = allCards[cardId];
-  console.log(card);
   const cardInfo = buildInfo(card);
 
   return (

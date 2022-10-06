@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import * as HearthstoneInfoSlice from '../../../features/Category/HearthstoneCategorySlice';
 import loadingStatus from '../../../features/reduxConst';
 import CardExpand from '../../components/Card/CardExpand';
@@ -8,9 +8,6 @@ import CardExpand from '../../components/Card/CardExpand';
 const CardDetailsPage = () => {
   const dispatch = useDispatch();
   const params = useParams();
-  const location = useNavigate();
-
-  console.log(location);
   const { cardId } = params;
   const allCards = useSelector((store) => store.HearthstoneCategory.allCards);
   useEffect(() => {

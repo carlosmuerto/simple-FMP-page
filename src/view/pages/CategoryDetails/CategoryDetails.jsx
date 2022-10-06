@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import * as HearthstoneInfoSlice from '../../../features/Category/HearthstoneCategorySlice';
 import Card from '../../components/Card/Card';
 import './CategoryDetails.scss';
@@ -9,9 +9,6 @@ const CategoryDetailsPage = () => {
   const params = useParams();
   const category = params.categoryId;
   const entry = params.entryId;
-  const location = useNavigate();
-
-  console.log(location);
 
   const dispatch = useDispatch();
   const categories = useSelector((store) => store.HearthstoneCategory.categories);
