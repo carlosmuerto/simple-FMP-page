@@ -5,6 +5,8 @@ import {
 } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './header.scss';
+import { BsArrowLeft } from 'react-icons/bs';
+import 'lato-font';
 
 const Header = ({ links }) => {
   const location = useLocation();
@@ -23,12 +25,18 @@ const Header = ({ links }) => {
     <header className="app-header">
 
       {activeLock[0].path !== '/'
-        ? <button type="button" onClick={() => { navigate(-1); }}>go back</button>
+        ? (
+          <button className="back-btn" type="button" onClick={() => { navigate(-1); }}>
+            <BsArrowLeft />
+          </button>
+        )
         : <div />}
 
-      <div className="nav-links">
+      <div className="can">
         {activeLock[0].text}
       </div>
+
+      <div />
     </header>
   );
 };
