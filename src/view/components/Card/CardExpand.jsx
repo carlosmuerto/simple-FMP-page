@@ -2,6 +2,7 @@
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import CardImage from './CardImage';
+import './CardExpand.scss';
 
 const buildInfo = (card) => {
   const info = [];
@@ -34,11 +35,20 @@ const CardExpand = () => {
   const cardInfo = buildInfo(card);
 
   return (
-    <div className="app-card-details">
-      <h1>{card.name}</h1>
+    <div className="app-card-expand-details">
+      <h1 className="card-title">{card.name}</h1>
       <div className="card-img-info">
         <CardImage cardImage={card.img} cardName={card.name} />
-        <p>{card.artist}</p>
+        {
+          card.artist
+            ? (
+              <p>
+                {'Artist: '}
+                {card.artist}
+              </p>
+            )
+            : undefined
+        }
       </div>
       <div className="card-info">
         {cardInfo.map((InfoEntry) => (
