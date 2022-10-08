@@ -1,8 +1,28 @@
 .card-details {
-  background-color: aliceblue;
+  .card-title {
+    text-transform: uppercase;
+    background-color: transparent;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0;
+    padding: 1rem;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    line-clamp: 2;
+    height: 1.8rem;
+    vertical-align: middle;
+    justify-content: center;
+    text-align: center;
+  }
 
-  .card-img {
-    width: 100%;
-    height: auto;
+  .card-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    .card-img {
+      width: 100%;
+      height: auto;
+    }
   }
 }

@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import CategoryEntry from './CategoryEntry';
+import './Categories.scss';
 
 const Categories = ({ category, info }) => (
   <div className="app-categories">
-    <h1>{category}</h1>
-    <div>
+    <h1 className="category-title">{category}</h1>
+    <div className="category-list">
       {info.map((entry) => <CategoryEntry key={`${category} ${entry}`} entry={entry} category={category} />)}
     </div>
   </div>
