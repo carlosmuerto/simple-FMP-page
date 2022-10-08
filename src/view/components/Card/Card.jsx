@@ -11,10 +11,10 @@ const Card = ({ cardName, cardId, cardImage }) => {
   };
   return (
     <div className="card-details">
-      <h6>
+      <h6 className="card-title">
         {cardName}
       </h6>
-      <button type="button" onClick={onClick}>
+      <button className="card-btn" type="button" onClick={onClick}>
         <CardImage cardImage={cardImage} cardName={cardName} />
       </button>
     </div>

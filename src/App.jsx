@@ -12,7 +12,7 @@ import CategoryDetailsPage from './view/pages/CategoryDetails/CategoryDetails';
 const links = [
   {
     path: '/',
-    text: 'Home',
+    text: 'HearthStone Cards',
     element: (<HomePage />),
   },
   {

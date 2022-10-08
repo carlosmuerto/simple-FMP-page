@@ -9,7 +9,6 @@ const CategoryEntry = ({ entry, category }) => {
   };
   return (
     <div className="app-category-entry">
-      <h4>{entry}</h4>
       <button type="button" onClick={onClick}>{entry}</button>
     </div>
   );

@@ -21,7 +21,7 @@ const CategoryDetailsPage = () => {
   }, [dispatch, params.categoryId, params.entryId]);
   return (
     <main className="app-category-details">
-      <h1>
+      <h1 className="category-title">
         {entry}
       </h1>
       <div className="category-detail-card-list">
