@@ -16,7 +16,7 @@ const CardDetailsPage = () => {
     }
   }, [dispatch, allCards, cardId]);
 
-  let cardComponent = <h1>loading</h1>;
+  let cardComponent = <h1 className="loading-message">loading</h1>;
   if (allCards[cardId]) {
     if (allCards[cardId].loading === loadingStatus.succeeded) {
       cardComponent = <CardExpand />;
