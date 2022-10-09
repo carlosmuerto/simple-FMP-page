@@ -1,0 +1,54 @@
+.app-categories {
+  .category-title {
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .category-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (min-width: 500px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    @media (min-width: 720px) {
+      grid-template-columns: repeat(7, 1fr);
+    }
+
+    @media (min-width: 1025px) {
+      grid-template-columns: repeat(9, 1fr);
+    }
+
+    .app-category-entry {
+      aspect-ratio: 1 / 1;
+
+      &:nth-child(even) {
+        background-color: #4067ad;
+      }
+
+      &:nth-child(odd) {
+        background-color: #3e61a4;
+      }
+
+      button {
+        width: 100%;
+        height: 100%;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 0 solid transparent;
+        background-color: transparent;
+        cursor: pointer;
+        vertical-align: middle;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+}

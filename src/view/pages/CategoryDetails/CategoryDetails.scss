@@ -1,0 +1,14 @@
+.category-title {
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  margin: 0;
+  padding: 1rem;
+}
+
+.category-detail-card-list {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 10rem);
+}
