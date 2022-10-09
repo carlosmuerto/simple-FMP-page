@@ -1,7 +1,7 @@
 import HearthstoneInfoReducer from './HearthstoneInfoSlice';
 import loadingStatus from '../reduxConst';
 
-describe('counter reducer', () => {
+describe('Hearthstone Info Reducer', () => {
   const initialState = {
     info: [],
     status: loadingStatus.idle,
