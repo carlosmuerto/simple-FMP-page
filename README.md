@@ -1,6 +1,6 @@
-# Financial Modeling Prep
+# hearthstone API
 
-> In this page, we are working with the real live data from the SpaceX API. Our task is to build a web application tha consume https://rapidapi.com/omgvamp/api/hearthstone/ Restful API. The application will allow users to book rockets and join selected space missions.
+> In this page, My task is to build a web application tha consume https://rapidapi.com/omgvamp/api/hearthstone/ Restful API. The application will show all HeathStone Card categorized in diferent ways.
 
 ![screenshot](https://user-images.githubusercontent.com/34493013/194731370-aff2cbd5-21be-4802-a0d0-37159b8432f2.png)
 
