@@ -1,6 +1,6 @@
 # hearthstone API
 
-> In this page, My task is to build a web application tha consume https://rapidapi.com/omgvamp/api/hearthstone/ Restful API. The application will show all HeathStone Card categorized in diferent ways.
+> On this page, My task is to build a web application that consumes https://rapidapi.com/omgvamp/api/hearthstone/ Restful API. The application will show all HearthStone cards categorized in different ways..
 
 ![screenshot](https://user-images.githubusercontent.com/34493013/194731370-aff2cbd5-21be-4802-a0d0-37159b8432f2.png)
 ![imagen](https://user-images.githubusercontent.com/34493013/217884726-6e649f1f-817a-4f9c-a019-c8ebb1e3aad6.png)
