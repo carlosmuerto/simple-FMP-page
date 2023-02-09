@@ -3,6 +3,8 @@
 > In this page, My task is to build a web application tha consume https://rapidapi.com/omgvamp/api/hearthstone/ Restful API. The application will show all HeathStone Card categorized in diferent ways.
 
 ![screenshot](https://user-images.githubusercontent.com/34493013/194731370-aff2cbd5-21be-4802-a0d0-37159b8432f2.png)
+![imagen](https://user-images.githubusercontent.com/34493013/217884726-6e649f1f-817a-4f9c-a019-c8ebb1e3aad6.png)
+
 
 [![Presentation](https://res.cloudinary.com/marcomontalbano/image/upload/v1665273472/video_to_markdown/images/google-drive--1TZ1asbQP5gQpKD2P0h7ce-_NU2QtWTv1-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://drive.google.com/file/d/1TZ1asbQP5gQpKD2P0h7ce-_NU2QtWTv1/view "Presentation")
 
